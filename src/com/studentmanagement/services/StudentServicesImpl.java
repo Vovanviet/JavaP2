@@ -29,7 +29,7 @@ public class StudentServicesImpl implements StudentServices{
     public void updateStudent(String name) {
         try {
             students.forEach(t->{
-                if (name.equals(t)){
+                if (name.equals(t.getName())){
                         System.out.println("Enter new RollNo:");
                         String newRollNo = scanner.next();
                         System.out.println("Enter Name or New Name:");
@@ -70,6 +70,24 @@ public class StudentServicesImpl implements StudentServices{
     @Override
     public void deleteStudent(String name) {
         try {
+            students.forEach(t->{
+                if (name.equals(t.getName())){
+                    System.out.println("Are you sure?\n1.Yes\n2.No");
+                        int choose = scanner.nextInt();
+                        switch (choose) {
+                            case 1:
+                                students.remove(name);
+                                System.out.println("Deleted successfully!");
+                                break;
+                            case 2:
+                                System.out.println("The operation has been cancelled!!!");
+                            default:
+                                System.out.println("Number input invalid!");
+                        }
+                }
+            });
+
+
 //                for (int i = 0; i < students.size(); i++) {
 //                    if (name.equals(students.get(i).getName())) {
 //                        System.out.println("Are you sure?\n1.Yes\n2.No");
@@ -96,7 +114,7 @@ public class StudentServicesImpl implements StudentServices{
         try {
 
 
-            System.out.println(students.get(students.size() - 1));
+            System.out.println(students);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -105,12 +123,18 @@ public class StudentServicesImpl implements StudentServices{
     @Override
     public void searchStudent(String name) {
         try {
-            students=getData.getDataTxt();
-                for (int i = 0; i < students.size(); i++) {
-                    if (name.equals(students.get(i).getName())) {
-                        System.out.println(students.get(i));
-                    }
+            students.forEach(t->{
+                if (name.equals(t.getName())){
+                    System.out.println(t);
                 }
+            });
+
+
+//                for (int i = 0; i < students.size(); i++) {
+//                    if (name.equals(students.get(i).getName())) {
+//                        System.out.println(students.get(i));
+//                    }
+//                }
 
         } catch (Exception e) {
             e.printStackTrace();
