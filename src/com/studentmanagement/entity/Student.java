@@ -50,8 +50,8 @@ public class Student {
         return  "{"+
                 "\"rollNo\":\"" + rollNo +"\""+
                 ", \"name\":\"" + name + "\""+
-                ",\"age\":\""+age+"\""+
-                ", \"mark\":\"" +Math.ceil(mark*10)/10 + "\""+"}"
+                ",\"age\":"+age+
+                ", \"mark\":" +Math.ceil(mark*10)/10 +"}"
                ;
     }
 }

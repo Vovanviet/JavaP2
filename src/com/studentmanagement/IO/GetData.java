@@ -36,7 +36,7 @@ public class GetData {
             for (String str : array) {
                 System.out.println(str);
             }
-            
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -46,11 +46,11 @@ public class GetData {
         return students;
     }
 
-    public static void main(String[] args) {
-        GetData getData=new GetData();
-        getData.getDataTxt();
-        getData.students.get(0);
-    }
+//    public static void main(String[] args) {
+//        GetData getData=new GetData();
+//        getData.getDataTxt();
+//        getData.students.get(0);
+//    }
 
 }
 //            FileReader student = new FileReader("Student.json");
