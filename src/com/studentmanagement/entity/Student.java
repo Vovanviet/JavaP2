@@ -48,10 +48,10 @@ public class Student {
     @Override
     public String toString() {
         return  "{"+
-                "id=" + rollNo +
-                ", name='" + name + '\'' +
-                ",age="+age+
-                ", mark='" +Math.ceil(mark*10)/10 + '\''+"}"
+                "\"rollNo\":\"" + rollNo +"\""+
+                ", \"name\":\"" + name + "\""+
+                ",\"age\":\""+age+"\""+
+                ", \"mark\":\"" +Math.ceil(mark*10)/10 + "\""+"}"
                ;
     }
 }
