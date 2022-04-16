@@ -1,1 +1,0 @@
-[{id=123456789, name='john',age=19, mark='10.0'}, {id=123456789, name='venus',age=20, mark='8.0'}]
